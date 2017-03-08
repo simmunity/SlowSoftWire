@@ -4,8 +4,6 @@
 #define SLOW_SOFT_WIRE
 #include <SlowSoftI2CMaster.h>
 
-
-
 class SlowSoftWire : public Stream
 {
 private:
@@ -42,5 +40,7 @@ public:
   inline size_t write(int n) { return write((uint8_t)n); }
   using Print::write;
 };
+
+extern SlowSoftWire Wire;
 
 #endif
